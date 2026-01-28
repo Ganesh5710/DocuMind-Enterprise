@@ -20,7 +20,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 chunks = text_splitter.split_documents(documents)
 
 db = Chroma.from_documents(
-    documents=chunks,
+    documents=chunks
     embedding=OllamaEmbeddings(model="nomic-embed-text"),
     persist_directory="chroma_db"
 )
